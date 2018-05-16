@@ -1,0 +1,15 @@
+{
+  "name": "webdesign-for-all",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "gulp": "^4.0.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-size": "^3.0.0",
+    "imagemin-mozjpeg": "^7.0.0"
+  }
+}
