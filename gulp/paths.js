@@ -20,6 +20,7 @@ paths.siteDir                   = paths.siteFolderName + '/';
 
 //Расположение исходных данных
 paths.imageFiles                = paths.sourceDir + paths.assetsDir + paths.imageFolderName; // src/assets/images
+paths.imageFilesOpt         = paths.imageFiles+ '/optimal'; // src/assets/images/optimal
 
 //Расположение временных файлов
 paths.assetsFilesTemp           = paths.tempDir + paths.assetsFolderName;
@@ -33,6 +34,6 @@ paths.imageFilesSite            = paths.siteDir + paths.assetsDir + paths.imageF
 paths.imagePattern              = '/**/*.+(jpg|JPG|jpeg|JPEG|png|PNG|svg|SVG|gif|GIF|webp|WEBP|tif|TIF)';
 
 //Глобальные файлы
-paths.imageFilesGlob            = paths.imageFiles + paths.imagePattern; // src, .tmp, dist + .... + pattern
+paths.imageFilesGlobSrc            = paths.imageFiles+ '/source' + paths.imagePattern; // src/assets/images/source + pattern
 
 module.exports = paths;

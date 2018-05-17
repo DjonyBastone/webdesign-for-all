@@ -12,3 +12,6 @@ require('./gulp/paths');
 require('./gulp/tasks/images.js')();
 
 $.gulp.task('images:optimize');
+$.gulp.task('images:response');
+
+$.gulp.task('images', $.gulp.series('images:optimize', 'images:response'))
