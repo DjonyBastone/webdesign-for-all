@@ -5,8 +5,9 @@ module.exports = () => {
     //Включаем файл с настройками путей
     let paths = require('../paths');
 
+    // Оптимизация изображений
     $.gulp.task('images:optimize', () => {
-        return $.gulp.src([paths.imageFilesGlobSrc])
+        return $.gulp.src([paths.imageFilesGlob])
             .pipe($.gp.changed(paths.imageFilesOpt)) //Берет и сверяет файлы, вычисляет новые изменения
             .pipe($.gp.imagemin([
                 $.gp.imagemin.gifsicle({interlaced: true}),

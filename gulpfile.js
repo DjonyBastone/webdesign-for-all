@@ -10,8 +10,7 @@ global.$ = {
 //Настройка путей до тасков
 require('./gulp/paths');
 require('./gulp/tasks/images.js')();
+require('./gulp/tasks/fonts.js')();
 
-$.gulp.task('images:optimize');
-$.gulp.task('images:response');
 
 $.gulp.task('images', $.gulp.series('images:optimize', 'images:response'))
