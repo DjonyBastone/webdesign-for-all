@@ -1,0 +1,123 @@
+.header__bot {
+    background-color: #68bdf8;
+    text-align: center;
+    position: relative;
+    z-index: 0;
+}
+.header__bot .ico {
+    height: 65px;
+    margin-bottom: 12px
+}
+
+.header__bot .ico img {
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+    max-width: 100%
+}
+
+.header__bot ul {
+    font-size: 0;
+    line-height: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center
+}
+
+.header__bot li {
+    width: 16.66666667%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative
+}
+
+.header__bot li:last-child:after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    border-right: 1px solid #8bcbf8;
+    border-left: 1px solid #5cb5f3;
+    right: 0;
+    top: 0
+}
+
+.header__bot li:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 100%;
+    border-right: 1px solid #8bcbf8;
+    border-left: 1px solid #5cb5f3;
+    left: 0;
+    top: 0
+}
+
+.header__bot li a {
+    display: block;
+    width: 100%;
+    padding: 30px 5px 20px;
+    position: relative;
+    overflow: hidden
+}
+
+.header__bot li a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    content: '';
+    background-color: #5cb5f3;
+    z-index: -1;
+    transition: .3s;
+    opacity: 0
+}
+
+.header__bot li:hover a:after {
+    transform: translateY(0);
+    opacity: 1
+}
+
+.header__bot p {
+    font: 16px "Russia", sans-serif;
+    color: #fff;
+    text-indent: 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .header__bot p, form .wrap_input input {
+        font-size: 15px
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header__bot p {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header__bot li:nth-child(3):after {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        border-right: 1px solid #8bcbf8;
+        border-left: 1px solid #5cb5f3;
+        right: 0;
+        top: 0
+    }
+    .header__bot li {
+        width: 33.333%;
+        border-bottom: 1px solid #8bcbf8
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header__bot p {
+        font-size: 11px
+    }
+}

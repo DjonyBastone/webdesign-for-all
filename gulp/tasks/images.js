@@ -7,7 +7,7 @@ module.exports = () => {
 
     // Оптимизация изображений
     $.gulp.task('images:optimize', () => {
-        return $.gulp.src([paths.imageFilesGlob])
+        return $.gulp.src([paths.imageFilesSrc + paths.imagePattern])
             .pipe($.gp.changed(paths.imageFilesOpt)) //Берет и сверяет файлы, вычисляет новые изменения
             .pipe($.gp.imagemin([
                 $.gp.imagemin.gifsicle({interlaced: true}),

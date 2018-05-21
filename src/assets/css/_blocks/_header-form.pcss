@@ -1,0 +1,234 @@
+form {
+    background-color: rgba(13, 27, 33, 0.85);
+    padding: 30px 30px 35px;
+    position: relative;
+    text-align: center;
+    z-index: 0
+}
+
+form:before {
+    opacity: 0.8;
+    border: 1px solid white;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    position: absolute;
+    content: '';
+    left: -15px;
+    top: -15px;
+    z-index: -1
+}
+
+form h3 {
+    font: 21px "Phenomena-Bold", sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 2px
+}
+
+form h3 strong {
+    font: 28px "Phenomena-ExtraBold", sans-serif
+}
+
+form p {
+    font: 16px "Russia", sans-serif;
+    color: #fff;
+
+    text-indent: inherit;
+    text-align: center;
+    margin-bottom: 20px
+}
+
+form a {
+    margin-top: 0;
+    font: 10px "Russia Light", sans-serif;
+    color: #fff;
+    text-align: justify;
+}
+
+form .red_btn, form .blue_btn {
+    width: 100%;
+    font-size: 15px;
+    margin-top: 5px
+}
+
+form .red_btn[disabled], form .blue_btn[disabled] {
+    cursor: not-allowed;
+    opacity: .65;
+    box-shadow: none;
+}
+
+form .wrap_input {
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 2px solid #fff;
+    transition: .3s;
+    position: relative;
+    margin-bottom: 22px
+}
+
+form .wrap_input.textarea {
+    height: 225px
+}
+
+form .wrap_input.error {
+    border-bottom-color: #ef2b2b;
+    margin-bottom: 35px;
+}
+
+form .wrap_input.error i {
+    color: #ef2b2b
+}
+
+form .wrap_input.focus:not(.error) {
+    border-bottom-color: #68bdf8
+}
+
+form .wrap_input.focus:not(.error) i {
+    color: #68bdf8
+}
+
+form .wrap_input.focus:not(.error) input::-webkit-input-placeholder, form .wrap_input.focus:not(.error) textarea::-webkit-input-placeholder {
+    opacity: 0
+}
+
+form .wrap_input.focus:not(.error) input::-moz-placeholder, form .wrap_input.focus:not(.error) textarea::-moz-placeholder {
+    opacity: 0
+}
+
+form .wrap_input.focus:not(.error) input:-ms-input-placeholder, form .wrap_input.focus:not(.error) textarea:-ms-input-placeholder {
+    opacity: 0
+}
+
+form .wrap_input.focus:not(.error) input::placeholder, form .wrap_input.focus:not(.error) textarea::placeholder {
+    opacity: 0
+}
+
+form label.error {
+    font: 14px "Russia Light", sans-serif;
+    color: #fff;
+}
+
+form .wrap_input textarea {
+    padding: 20px;
+    font: 16px "Russia", sans-serif;
+    color: #fff;
+    background: none;
+    border: none;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+
+
+form .wrap_input textarea::placeholder {
+    color: #fff;
+    transition: .3s
+}
+
+form .wrap_input input {
+    padding: 0 10px 0 52px;
+    width: 100%;
+    height: 100%;
+    font: 16px "Russia", sans-serif;
+    color: #fff
+}
+
+form .wrap_input input::-webkit-input-placeholder {
+    color: #fff;
+    transition: .3s
+}
+
+form .wrap_input input::-moz-placeholder {
+    color: #fff;
+    transition: .3s
+}
+
+form .wrap_input input:-ms-input-placeholder {
+    color: #fff;
+    transition: .3s
+}
+
+form .wrap_input input::placeholder {
+    color: #fff;
+    transition: .3s
+}
+
+form .wrap_input i {
+    color: #fff;
+    position: absolute;
+    transition: .3s;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%)
+}
+
+.form__checkbox label {
+    margin-bottom: 30px;
+    display: flex;
+    position: relative;
+}
+
+.form__checkbox span {
+    flex: 1;
+    max-width: 30px;
+}
+
+.form__checkbox input {
+    opacity: 0;
+    margin: 6px 0 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    border: 4px solid;
+}
+
+.form__checkbox i::after {
+    width: 10px;
+    height: 10px;
+    border: 3px solid #ef2b2b;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 6px;
+    content: "";
+    backface-visibility: hidden;
+}
+
+.form__checkbox input:checked+i::after {
+    border: 3px solid #68bdf8;
+    background: url(/design/image/checked.jpg) no-repeat center center;
+}
+
+.form__checkbox a {
+    flex: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    form .red_btn {
+        font-size: 14px
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header form {
+        width: 350px;
+        max-width: 100%;
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .header form {
+        padding: 25px 15px
+    }
+    form .wrap_input input {
+        font-size: 12px;
+    }
+    form .wrap_input textarea {
+        font-size: 12px;
+    }
+}
