@@ -6,6 +6,7 @@
   "dependencies": {
     "browser-sync": "^2.24.4",
     "css-mqpacker": "^6.0.2",
+    "del": "^3.0.0",
     "glob": "^7.1.2",
     "gulp": "^4.0.0",
     "gulp-changed": "^3.2.0",

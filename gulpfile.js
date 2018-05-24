@@ -11,6 +11,7 @@ global.$ = {
     argv: require('yargs').argv,
     browserSync: require('browser-sync').create(),
     cssnext: require('postcss-cssnext'),
+    del: require('del'),
     mozjpeg: require('imagemin-mozjpeg'),
     mqpacker: require('css-mqpacker'),
     postcssImport: require('postcss-import'),
@@ -22,3 +23,5 @@ require('./gulp/paths');
 require('./gulp/tasks/assets.js')();
 require('./gulp/tasks/images.js')();
 require('./gulp/tasks/fonts.js')();
+require('./gulp/tasks/copy.js')();
+require('./gulp/tasks/clean.js')();
