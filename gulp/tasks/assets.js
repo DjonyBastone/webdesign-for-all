@@ -55,6 +55,7 @@ module.exports = () => {
         return $.gulp.src([paths.cssFiles + '/**/*.*', '!' + paths.cssFiles + '/_block/**/*'])
             .pipe( $.gp.postcss(config) ) //Config нужен для postcss-import
             .pipe( $.gp.postcss(processors) )
+            .pipe($.gp.when($.argv.prod, $.gp.csso() ))
             .pipe( $.gp.rename({extname: '.css'}) )  // Это шаблончик для переименования
             .pipe($.gulp.dest(paths.cssFilesTemp))  // Складывает результат во временную папку
             .pipe($.gp.when(!$.argv.prod, $.browserSync.stream())) //пробрасывает результат в browserSync
